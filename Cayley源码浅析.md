@@ -167,7 +167,7 @@ type Shape interface {
 
 ## 4. 核心类图
 
-![image-1](https://github.com/sysublackbear/cayleygraph_analysis/blob/main/img/2.png?raw=true)
+![image-2](https://github.com/sysublackbear/cayleygraph_analysis/blob/main/img/2.png?raw=true)
 
 ## 5. Shape
 
@@ -262,9 +262,9 @@ type Index interface {
 
 ### 5.2. Shape类图
 
-![3](/Users/bytedance/github/cayleygraph_analysis/img/3.png)
+![image-3](https://github.com/sysublackbear/cayleygraph_analysis/blob/main/img/3.png?raw=true)
 
-![4](/Users/bytedance/github/cayleygraph_analysis/img/4.png)
+![image-4](https://github.com/sysublackbear/cayleygraph_analysis/blob/main/img/4.png?raw=true)
 
 看到Cayley支持各种算子，然后每种算子去实现对应它们自身语义的一些逻辑，这个详见：graph/iterator 包。
 
@@ -522,9 +522,9 @@ type internalQuad struct {
 
 ### 7.1. 数据结构说明
 
-![5](/Users/bytedance/github/cayleygraph_analysis/img/5.png)
+![image-5](https://github.com/sysublackbear/cayleygraph_analysis/blob/main/img/5.png?raw=true)
 
-![6](/Users/bytedance/github/cayleygraph_analysis/img/6.png)
+![image-6](https://github.com/sysublackbear/cayleygraph_analysis/blob/main/img/6.png?raw=true)
 
 我们可以看到B+树维度的话，每个方向{subject, predicate, object, label}都记录了一棵B+树，B+树的叶子节点都是prim里面的id项。遍历和增删改查围绕上面几个关键要素进行。
 
@@ -536,7 +536,8 @@ Kv包这边统一使用了hidalgo包的通用接口来统一适配，屏蔽掉�
 
 关于hidalgo包，详见：https://github.com/hidal-go/hidalgo/tree/master/kv
 
-![7](/Users/bytedance/github/cayleygraph_analysis/img/7.png)
+![image-7](https://github.com/sysublackbear/cayleygraph_analysis/blob/main/img/7.png?raw=true)
+
 
 ### 8.1. 核心结构
 
@@ -607,7 +608,8 @@ type Primitive struct {
 
 ### 8.2. KV结构
 
-![8](/Users/bytedance/github/cayleygraph_analysis/img/8.png)
+![image-8](https://github.com/sysublackbear/cayleygraph_analysis/blob/main/img/8.png?raw=true)
+
 
 - meta数据包含version，size， horizon。
 - 遍历的时候，会扫描log bucket。
@@ -629,7 +631,7 @@ type Primitive struct {
 
 sql包也统一定义了`Registration`结构体，来适配下层的不同的关系型数据库（cockroach，mysql，postgres，sqlite）。如下：
 
-![9](/Users/bytedance/github/cayleygraph_analysis/img/9.png)
+![image-9](https://github.com/sysublackbear/cayleygraph_analysis/blob/main/img/9.png?raw=true)
 
 ### 9.1. 数据库表设计
 
@@ -805,7 +807,7 @@ type Database interface {
 }
 ```
 
-![10](/Users/bytedance/github/cayleygraph_analysis/img/10.png)
+![image-10](https://github.com/sysublackbear/cayleygraph_analysis/blob/main/img/10.png?raw=true)
 
 nosql的层级关系：
 
