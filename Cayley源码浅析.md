@@ -19,7 +19,7 @@ github地址：https://github.com/cayleygraph/cayley
 
 ## 2. 整体架构
 
-![@](https://github.com/sysublackbear/cayleygraph_analysis/blob/master/img/1.svg?raw=true)
+![@](https://github.com/sysublackbear/cayleygraph_analysis/blob/master/img/1.png?raw=true)
 
 查询的语句进入Cayley之后，经过一些列的语句转换之后，变成了基于Iterator(Shape)相关的查询方法，然后进入到底层，会变成两个Handle，Handle由读（QuadStore）和写（QuadWriter）两块组成的，下层会注册多种存储，包含memstore, kv, sql和nosql。
 
