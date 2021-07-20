@@ -1,2 +1,3 @@
 # cayleygraph_analysis
-cayleygraph源码浅析
+关于对cayleygraph的源码浅析，详见请看：《Cayley源码浅析》。
+
